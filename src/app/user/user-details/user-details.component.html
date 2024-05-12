@@ -1,0 +1,68 @@
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">            
+            <div class="col-md-4">
+                <div class="card card-user">
+                    <div class="image">
+                        <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
+                    </div>
+                    <div class="content">
+                        <div class="author">
+                            <a href="#">
+                                <img class="avatar border-gray" src="{{user.profileImg}}" alt="..."/>
+                                <h4 class="title">{{user.username}}<br />
+                                    <small>{{user.email}}</small>
+                                </h4>
+                            </a>
+                        </div>
+                        <p class="description text-center"> 
+                            {{user.bio}}
+                            
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <button  class="btn btn-primary">Update Status</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Followers</h4>
+                    </div>
+                    <div class="content">
+                        <div   *ngFor="let user of followers">
+                            <div class="d-flex flex-row">
+                                <img class="avatar border-gray" src="{{user.profileImg}}" alt="" srcset="">
+                                <span>{{user.username}}</span>
+                                <!-- <div class="d-flex flex-column">                                    
+                                    <span>{{user.email}}</span>
+                                </div> -->
+                                
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Following</h4>
+                    </div>
+                    <div class="content">
+                        <div   *ngFor="let user of following">
+                            <div class="d-flex flex-row m-2">
+                                <img class="avatar border-gray" src="{{user.profileImg}}" alt="" srcset="">
+                                <span>{{user.username}}</span>
+                                <!-- <div class="d-flex flex-column">                                    
+                                    <span>{{user.email}}</span>
+                                </div> -->
+                                
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

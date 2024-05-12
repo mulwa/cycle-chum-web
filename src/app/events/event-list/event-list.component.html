@@ -1,0 +1,39 @@
+<div class="main-content">
+    <div class="container-fluid">
+       <div class="card">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Event Title</th>
+                    <th scope="col">Event Description</th>
+                    <th scope="col">Start Address</th>
+                    <th scope="col">End Address</th>
+                    <th scope="col">Total Distance</th>
+                    <th scope="col">Start Date / Time</th>
+                    <th scope="col"> Action</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let event of events; index as i">
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{event.eventTitle}}</td>
+                    <td>{{event.eventDesc}}</td>
+                    <td>{{event.startAddress.name}}</td>
+                    <td>{{event.endAddress.name}}</td>
+                    <td>{{event.eventDate}}{{event.eventTime}} </td>
+                    <td>{{event.distance}} Km</td>
+                    <td>
+                        <button class="btn btn-primary"  
+                           (click)="openDetails(event)"> view</button>
+                      </td>
+                  </tr>                
+                </tbody>
+              </table>
+        </div>
+       </div>
+        
+    </div>
+</div>

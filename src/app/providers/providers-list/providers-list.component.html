@@ -1,0 +1,36 @@
+<div class="main-content">
+    <div class="container-fluid">
+       <div class="card">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Business Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Date Joined</th>
+                    <th scope="col"> Action</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let provider of providers; index as i">
+                      <th scope="row">{{i + 1}}</th>
+                      <td>{{provider.username}}</td>
+                      <td>{{provider.businessName}}</td>
+                    <td>{{provider.businessDesc}}</td>                                      
+                    <td>{{ provider.createdOn }}</td>
+                    <td>
+                        <button class="btn btn-primary"  
+                           (click)="openDetails(user)"> view</button>
+                      </td>
+                  </tr>                
+                </tbody>
+              </table>
+        </div>
+       </div>
+        
+    </div>
+</div>
